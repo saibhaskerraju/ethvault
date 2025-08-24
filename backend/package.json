@@ -30,7 +30,8 @@
     "validator": "^13.12.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "eslintConfig": {
     "extends": "react-app"

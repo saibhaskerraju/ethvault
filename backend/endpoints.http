@@ -1,0 +1,39 @@
+### Fetch a specific note by ID
+GET http://localhost:4001/api/notes/1
+
+### Fetch all notes
+GET http://localhost:4001/api/notes
+
+### Create a new note
+POST http://localhost:4001/api/notes
+Content-Type: application/json
+
+{
+  "title": "New Note Title",
+  "author": "Author Name",
+  "createdBy": "Creator Name",
+  "content": "This is the content of the new note."
+}
+
+### Update a note by ID
+PUT http://localhost:4001/api/notes/1
+Content-Type: application/json
+
+{
+  "title": "Updated Note Title",
+  "author": "Updated Author Name",
+  "createdBy": "Updated Creator Name",
+  "content": "This is the updated content of the note."
+}
+
+### Partially Update a note by ID
+PATCH http://localhost:4001/api/notes/1
+Content-Type: application/json
+
+{
+  "title": "Partially Updated Note Title",
+  "content": "This is the partially updated content of the note."
+}
+
+### Delete a note by ID
+DELETE http://localhost:4001/api/notes/1

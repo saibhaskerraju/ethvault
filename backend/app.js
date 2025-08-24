@@ -3,7 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
-
+const notes = require('./routes/notesRoute');
 const app = express();
 
 // config
@@ -13,15 +13,17 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 
-const user = require('./routes/userRoute');
-const product = require('./routes/productRoute');
-const order = require('./routes/orderRoute');
-const payment = require('./routes/paymentRoute');
 
-app.use('/api/user', user);
-app.use('/api/product', product);
-app.use('/api/order', order);
-app.use('/api/payment', payment);
+// const user = require('./routes/userRoute');
+// const product = require('./routes/productRoute');
+// const order = require('./routes/orderRoute');
+// const payment = require('./routes/paymentRoute');
+
+app.use('/api', notes);
+// app.use('/api/user', user);
+// app.use('/api/product', product);
+// app.use('/api/order', order);
+// app.use('/api/payment', payment);
 
 // deployment
 __dirname = path.resolve();
